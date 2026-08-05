@@ -1,0 +1,150 @@
+/* ---------- Homepage: stats strip ---------- */
+.stats-strip{
+  padding:40px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:20px;
+  text-align:center;
+}
+.stat-item .num{
+  font-family:'Fraunces',serif;
+  font-size:28px;
+  color:var(--navy);
+  line-height:1.1;
+}
+.stat-item .label{
+  font-size:12px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  margin-top:6px;
+}
+
+/* ---------- Dashboard under hero ---------- */
+.dashboard-showcase{padding:0 0 56px;}
+.dashboard-frame{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.dashboard-frame .bar{
+  background:var(--navy);
+  height:26px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:0 12px;
+}
+.dashboard-frame .bar span{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(255,255,255,.35);
+}
+.dashboard-frame img{width:100%;display:block;}
+.dashboard-cap{
+  text-align:center;
+  margin-top:12px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ---------- Built for: pills ---------- */
+.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;}
+.pill-row + .eyebrow,
+.built-subhead{margin-top:28px;}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 14px;
+  border-radius:999px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  font-size:13px;
+  font-weight:500;
+  color:var(--ink);
+  box-shadow:0 1px 0 rgba(30,25,15,.03);
+}
+.pill.accent{
+  background:var(--rust-bg);
+  border-color:#e8cfc4;
+  color:var(--rust);
+}
+.pill.navy{
+  background:var(--navy-bg);
+  border-color:#c9d3e4;
+  color:var(--navy);
+}
+
+/* ---------- Module icons (emoji-friendly) ---------- */
+.module-card .icon.emoji{
+  font-size:22px;
+  background:var(--rust-bg);
+  color:inherit;
+}
+
+/* ---------- Social proof ---------- */
+.social-proof{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto;
+}
+.social-proof h3{font-size:28px;margin:10px 0 14px;}
+.social-proof p{color:#4a4535;font-size:15px;margin:0;}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:720px;margin:0 auto;}
+.faq-item{
+  border-bottom:1px solid var(--line2);
+  padding:4px 0;
+}
+.faq-item summary{
+  cursor:pointer;
+  font-weight:600;
+  font-size:15px;
+  color:var(--navy);
+  padding:16px 0;
+  list-style:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{
+  content:"+";
+  font-family:'Fraunces',serif;
+  font-size:20px;
+  color:var(--rust);
+  flex-shrink:0;
+}
+.faq-item[open] summary::after{content:"–";}
+.faq-item .faq-body{
+  padding:0 0 16px;
+  font-size:14px;
+  color:#4a4535;
+}
+.faq-item .faq-body p{margin:0;}
+
+/* ---------- Footer copyright in brand (rust) ---------- */
+.footer-bottom.brand-colour{
+  color:var(--rust);
+}
+.footer-bottom.brand-colour span{color:var(--rust);}
+
+/* ---------- Header: single primary CTA (no free trial) ---------- */
+/* Use only .btn-primary in .nav-cta — no extra rule required */
+
+/* ---------- Responsive extras ---------- */
+@media (max-width:860px){
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:16px 12px;}
+}
+@media (max-width:520px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .stat-item:last-child{grid-column:1 / -1;}
+}
